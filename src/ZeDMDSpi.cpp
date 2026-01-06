@@ -16,7 +16,7 @@
 
 namespace
 {
-constexpr uint8_t kSpiBitsPerWord = 16;
+constexpr uint8_t kSpiBitsPerWord = 8;
 constexpr uint8_t kSpiMode = SPI_MODE_0;
 constexpr unsigned int kCsGpio = 25;  // GPIO25 on Raspberry Pi
 constexpr const char kGpioConsumer[] = "ZeDMDSpi";
