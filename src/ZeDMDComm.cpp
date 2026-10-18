@@ -115,7 +115,7 @@ void ZeDMDComm::Run()
 
               // Sleep until a frame arrives instead of polling. The timeout keeps the keep alive and the connection
               // check running.
-              m_frameQueueCv.wait_for(lock, std::chrono::milliseconds(5),
+              m_frameQueueCv.wait_for(lock, std::chrono::milliseconds(1),
                                       [this]()
                                       {
                                         if (m_stopFlag.load(std::memory_order_relaxed) || !m_frames.empty())
